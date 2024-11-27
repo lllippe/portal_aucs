@@ -1,0 +1,37 @@
+.lyrics {
+    text-align: center;
+    padding-bottom: 5vw;
+}
+
+.lyrics-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-font);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.lyrics-paragraph {
+    font-family: var(--font-text);
+    font-size: 1.5vw;
+    color: var(--color-font);
+}
+
+.lyrics-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 0 15vw;
+    text-align: justify;
+}
+
+@media screen and (max-width:425px) {
+    .lyrics-h2 {
+        font-size: 8vw;
+    }
+    
+    .lyrics-paragraph {
+        font-size: 4vw;
+    }
+}

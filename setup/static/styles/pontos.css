@@ -1,0 +1,154 @@
+.pontos-light {
+    text-align: center;
+    padding-bottom: 5vw;
+}
+
+.pontos-light-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-font);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 8vw;
+}
+
+.pontos-dark {
+    background-color: var(--color-font);
+    opacity: 70%;
+    text-align: center;
+    padding-bottom: 4vw;
+}
+
+.pontos-dark-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-base);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 8vw;
+}
+
+.swiper-slide {
+    display: flex;
+}
+
+.button-pontos-next,
+.button-pontos-prev {
+    color: var(--color-base);
+    fill: var(--color-base);
+    stroke: var(--color-base);
+}
+
+.swiper-title-pontos {
+    text-align: center;
+    font-size: 3vw;
+    color: var(--color-font);
+    font-family: var(--font-title);    
+    padding: 1vw 0;
+}
+
+.swiper-paragraph-pontos {
+    text-align: center;
+    font-size: 1.8vw;
+    color: var(--color-font);
+}
+
+.swiper-card-pontos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 0.2vw var(--color-elements);
+    background-color: var(--color-elements);
+    margin-left: 4vw;
+    margin-right: 4vw;
+    color: var(--color-base);
+    border-radius: 1vw;
+}
+
+.swiper-title-icon {
+    padding-left: 9.5vw;
+    padding-bottom: 2vw;
+    width: 4vw;
+}
+
+.audio {
+    background-color: transparent;
+    padding: 2vw;
+    width: 20vw;
+}
+
+audio::-webkit-media-controls-enclosure { 
+    background-color: transparent;
+}
+
+.pontos-lyrics {
+    font-family: var(--font-text);
+    color: var(--color-font);
+    font-size: 1.5vw;
+    padding-top: 1vw;
+}
+
+.pontos-lyrics-link {
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+.pontos-dark-mobile {
+    display: none;
+}
+
+.pontos-light-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 425px) {
+    .pontos-dark {
+        display: none;
+    }
+
+    .pontos-light {
+        display: none;
+    }
+
+    .pontos-light-mobile {
+        display: block;
+        text-align: center;
+        padding-bottom: 5vw;
+    }
+    
+    .pontos-dark-mobile {
+        display: block;
+        background-color: var(--color-font);
+        opacity: 70%;
+        text-align: center;
+        padding-bottom: 4vw;
+    }
+
+    .pontos-light-h2 {
+        font-size: 8vw;
+        padding-top: 15vw;
+        padding-bottom: 15vw;
+    }
+    
+    .pontos-dark-h2 {
+        font-size: 8vw;
+    }
+
+    .pontos-lyrics {
+        font-size: 4vw;
+    }
+
+    .swiper-title-pontos {
+        font-size: 6vw;
+        padding-top: 5vw;
+    }
+
+    .swiper-card-pontos {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .audio {
+        background-color: transparent;
+        padding: 2vw;
+        width: 55vw;
+    }
+}

@@ -1,0 +1,104 @@
+.nav-bar {
+    display: flex;
+    padding: 4vw 0 2vw 7vw;
+    align-items: center;
+}
+
+.nav-bar-link {
+    font-family: var(--font-text);
+    color: var(--color-font);
+    font-size: 1.7vw;
+    padding: 0.3vw 3vw;
+    text-decoration: none;
+}
+
+.center {
+    border-right: solid 0.2vw var(--color-font);
+    border-left: solid 0.2vw var(--color-font);
+}
+
+.dead-center {
+    border-right: solid 0.2vw var(--color-font);
+}
+
+.wing-left:hover {
+    background-color: var(--color-elements);
+    border-radius: 20vw 0 0 20vw;
+    border: none;
+}
+
+.wing-right:hover {
+    background-color: var(--color-elements);
+    border-radius: 0 20vw 20vw 0;
+}
+
+.center:hover, .dead-center:hover, .dead-center-two:hover {
+    background-color: var(--color-elements);
+}
+
+.container {
+    display: none;
+}
+
+@media screen and (max-width:425px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .header-menu-hamburguer{
+        width: 24px;
+        height: 24px;
+        background-image: url("../assets/img/Menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+    }
+    
+    .cabecalho {
+        background-color: var(--branco);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .container-image {
+        padding: 1em;
+    }
+
+    .list-menu {
+        display: none;
+        position: absolute;
+        top: 10vw;
+        width: 50vw;
+        border: solid 1px var(--color-font);
+        border-radius: 5vw;
+        background-color: var(--color-elements);
+    }
+
+    .container-button {
+        display: none;
+    }
+
+    .container-button:checked ~ .list-menu {
+        display: block;
+        list-style-type: circle;
+    }
+
+    .list-menu-item {
+        padding: 1vw;
+    }
+
+    .list-menu-link {
+        color: var(--color-font);
+        text-decoration: none;   
+        font-family: var(--font-text);
+        font-weight: 600;
+        margin-left: 6vw;
+    }
+}

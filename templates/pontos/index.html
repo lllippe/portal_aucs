@@ -1,0 +1,189 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <title>Pontos | Anjos da Umbanda Cacique Sol</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container-button">
+            <label for="menu">
+                <span class="header-menu-hamburguer container-image"></span>
+            </label>
+            <ul class="list-menu">
+                <li class="list-menu-item">
+                    <a href="{% url 'index' %}" class="list-menu-link">Home</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="../#calendar" class="list-menu-link">Calendário</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="../#campaings" class="list-menu-link">Campanhas</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="../#donations" class="list-menu-link">Doações</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="index.html" class="list-menu-link">Pontos Cantados</a>
+                </li>
+                <li class="list-menu-item">
+                    <a href="../#location" class="list-menu-link">Localização</a>
+                </li>
+            </ul>
+        </div>
+        <nav class="nav-bar">
+            <a href="{% url 'index' %}" class="nav-bar-link wing-left">Home</a>
+            <a href="../#calendar" class="nav-bar-link center">Calendário</a>
+            <a href="../#campaings" class="nav-bar-link dead-center">Campanhas</a>
+            <a href="../#donations" class="nav-bar-link dead-center-two">Doações</a>
+            <a href="index.html" class="nav-bar-link center">Pontos Cantados</a> 
+            <a href="../#location" class="nav-bar-link wing-right">Localização</a>
+        </nav>
+    </header>
+    <main>
+        {% for y in linha %}
+            {% if y in dark %}
+                <section class="pontos-dark">
+                    <h2 class="pontos-dark-h2">Pontos de {{y}}</h2>
+                    <div class="swiper swiper-pontos">
+
+                        <div class="swiper-wrapper">
+                            {% for x in ponto %}
+                                {% if y == x.linha %}
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card-pontos">
+                                            <h2 class="swiper-title-pontos">{{x.titulo}}</h2>
+                                            <p class="pontos-lyrics"><a href="{% url 'letra' x.titulo %}" class="pontos-lyrics-link" target="_blank">Veja a letra</a></p>
+                                            <audio controls class="audio">
+                                                <source src="{% static 'assets/music/' %}{{x.arquivo}}" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-button-prev button-pontos-prev"></div>
+                        <div class="swiper-button-next button-pontos-next"></div>
+
+                    </div>
+                </section>
+
+                <section class="pontos-dark-mobile">
+                    <h2 class="pontos-dark-h2">Pontos de {{y}}</h2>
+                    <div class="swiper swiper-pontos-mobile">
+
+                        <div class="swiper-wrapper">
+                            {% for x in ponto %}
+                                {% if y == x.linha %}
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card-pontos">
+                                            <h2 class="swiper-title-pontos">{{x.titulo}}</h2>
+                                            <p class="pontos-lyrics"><a href="{% url 'letra' x.titulo %}" class="pontos-lyrics-link" target="_blank">Veja a letra</a></p>
+                                            <audio controls class="audio">
+                                                <source src="{% static 'assets/music/' %}{{x.arquivo}}" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-button-prev button-pontos-prev-mobile"></div>
+                        <div class="swiper-button-next button-pontos-next-mobile"></div>
+
+                    </div>
+                </section>
+            {% else %}
+                 <section class="pontos-light">
+                    <h2 class="pontos-light-h2">Pontos de {{y}}</h2>
+                    <div class="swiper swiper-pontos">
+
+                        <div class="swiper-wrapper">
+                            {% for x in ponto %}
+                                {% if y == x.linha %}
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card-pontos">
+                                            <h2 class="swiper-title-pontos">{{x.titulo}}</h2>
+                                            <p class="pontos-lyrics"><a href="{% url 'letra' x.titulo %}" class="pontos-lyrics-link" target="_blank">Veja a letra</a></p>
+                                            <audio controls class="audio">
+                                                <source src="{% static 'assets/music/' %}{{x.arquivo}}" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-button-prev button-pontos-prev"></div>
+                        <div class="swiper-button-next button-pontos-next"></div>
+
+                    </div>
+                </section>
+
+                <section class="pontos-light-mobile">
+                    <h2 class="pontos-light-h2">Pontos de {{y}}</h2>
+                    <div class="swiper swiper-pontos-mobile">
+
+                        <div class="swiper-wrapper">
+                            {% for x in ponto %}
+                                {% if y == x.linha %}
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card-pontos">
+                                            <h2 class="swiper-title-pontos">{{x.titulo}}</h2>
+                                            <p class="pontos-lyrics"><a href="{% url 'letra' x.titulo %}" class="pontos-lyrics-link" target="_blank">Veja a letra</a></p>
+                                            <audio controls class="audio">
+                                                <source src="{% static 'assets/music/' %}{{x.arquivo}}" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="swiper-button-prev button-pontos-prev-mobile"></div>
+                        <div class="swiper-button-next button-pontos-next-mobile"></div>
+
+                    </div>
+                </section>
+            {% endif %}
+        {% endfor %}
+    </main>
+
+    <footer class="footer">
+        <p class="footer-paragraph">Siga-nos nas redes sociais:</p>
+        <div class="footer-socials">
+            <img class="footer-icon" src="{% static 'assets/img/Instagram.png' %}" alt="Link Instagram">
+            <a class="footer-paragraph link-footer" href="https://www.instagram.com/anjosdaumbandacaciquesol" target="_blank">@anjosdaumbandacaciquesol</a>
+        </div>
+        <a href="https://www.frpelissari.com" class="footer-paragraph footer-developer">Desenvolvido por FRPelissari</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper_pontos = new Swiper('.swiper-pontos', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            navigation: {
+                nextEl: '.button-pontos-next',
+                prevEl: '.button-pontos-prev',
+            },
+        });
+        var swiper_pontos_mobile = new Swiper('.swiper-pontos-mobile', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.button-pontos-next-mobile',
+                prevEl: '.button-pontos-prev-mobile',
+            },
+        });
+    </script>
+</body>
+</html>

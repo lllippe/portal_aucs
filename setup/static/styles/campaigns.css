@@ -1,0 +1,88 @@
+.campaigns {
+    text-align: center;
+    padding-bottom: 5vw;
+}
+
+.campaigns-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-font);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 2vw;
+}
+
+.swiper-slide {
+    display: flex;
+}
+
+.swipper-padding {
+    margin-top: 5vw;
+    padding: 0 30vw;
+}
+
+.button-campaings-next,
+.button-campaings-prev {
+    color: var(--color-base);
+    fill: var(--color-base);
+    stroke: var(--color-base);
+}
+
+.swiper-title-campaings {
+    text-align: center;
+    font-size: 3vw;
+    color: var(--color-font);
+    font-family: var(--font-title);    
+    padding: 2vw 0;
+}
+
+.swiper-paragraph-campaings {
+    text-align: center;
+    font-size: 1.8vw;
+    color: var(--color-font);
+}
+
+.swiper-paragraph-obs-campaings {
+    text-align: center;
+    font-size: 1.4vw;
+    color: var(--color-font);
+    padding: 2vw 4vw;
+}
+
+.swiper-card-campaings {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 0.2vw var(--color-elements);
+    background-color: var(--color-elements);
+    margin-left: 4vw;
+    margin-right: 4vw;
+    color: var(--color-base);
+    border-radius: 1vw;
+}
+
+@media screen and (max-width: 425px) {
+    .campaigns-h2 {
+        font-size: 8vw;
+    }   
+
+    .swiper-card-campaings {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    .swiper-title-campaings {
+        font-size: 6vw;
+    }
+    
+    .swiper-paragraph-campaings {
+        font-size: 4vw;
+    }
+    
+    .swiper-paragraph-obs-campaings {
+        font-size: 3vw;
+    }
+
+    .swipper-padding {
+        padding: 0 20vw;
+    }
+}

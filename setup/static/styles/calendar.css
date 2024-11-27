@@ -1,0 +1,127 @@
+.calendar {
+    background-color: var(--color-font);
+    opacity: 70%;
+    text-align: center;
+    padding-bottom: 4vw;
+}
+
+.calendar-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-base);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 2vw;
+}
+
+.swiper-slide {
+    display: flex;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--color-base);
+    fill: var(--color-base);
+    stroke: var(--color-base);
+}
+
+.swiper-link {
+    text-decoration: none;
+    color: var(--color-base);
+}
+
+.swiper-title {
+    text-align: center;
+    font-size: 3vw;
+    color: var(--color-font);
+    font-family: var(--font-title);    
+    padding: 2vw 2vw;
+}
+
+.swiper-paragraph {
+    text-align: center;
+    font-size: 1.8vw;
+    color: var(--color-font);
+}
+
+.swiper-paragraph-situation {
+    text-align: center;
+    font-size: 2.3vw;
+    color: var(--color-font);
+    margin: 2vw 1vw;
+    padding: 0.5vw 0;
+    background-color: var(--color-font);
+    color: var(--color-base);
+    border-radius: 0.5vw;
+}
+
+.swiper-paragraph-obs {
+    text-align: center;
+    font-size: 1.4vw;
+    color: var(--color-font);
+    padding-bottom: 2vw;
+}
+
+.swiper-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 0.2vw var(--color-elements);
+    background-color: var(--color-elements);
+    margin-left: 4vw;
+    margin-right: 4vw;
+    color: var(--color-base);
+    border-radius: 0 0 1vw 1vw;
+}
+
+.swiper-card-items {
+    padding: 0 2vw;
+}
+
+.swiper-img {
+    width: 100%;
+}
+
+.calendar-mobile {
+    display: none;
+}
+
+@media screen and (max-width:425px) {
+    .calendar-h2 {
+        font-size: 8vw;
+        padding-bottom: 10vw;
+    }
+
+    .calendar {
+        display: none;
+    }
+
+    .calendar-mobile {
+        display: block;
+        background-color: var(--color-font);
+        opacity: 70%;
+        text-align: center;
+        padding-bottom: 4vw;
+    }
+
+    .swiper-card {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .swiper-title {
+        font-size: 6.3vw;
+    }
+    
+    .swiper-paragraph {
+        font-size: 4vw;
+    }
+    
+    .swiper-paragraph-situation {
+        font-size: 5vw;
+    }
+    
+    .swiper-paragraph-obs {
+        font-size: 3vw;
+    }
+
+}

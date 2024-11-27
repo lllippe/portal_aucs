@@ -1,0 +1,28 @@
+.welcome {
+    padding-top: 2vw;
+    font-family: var(--font-title);
+    font-size: 3vw;
+    text-align: center;
+    font-weight: 100;
+}
+
+.welcome-h2 {
+    color: var(--color-font);
+}
+
+.welcome-h1 {
+    padding-top: 2vw;
+    padding-bottom: 7vw;
+    color: var(--color-font);
+}
+
+.welcome-img {
+    width: 50vw;
+}
+
+@media screen and (max-width:425px) {
+    .welcome {
+        padding-top: 0;
+        font-size: 4.2vw;
+    }
+}

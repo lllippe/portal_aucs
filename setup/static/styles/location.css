@@ -1,0 +1,35 @@
+.location {
+    text-align: center;
+    padding-bottom: 5vw;
+}
+
+.location-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-font);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 2vw;
+}
+
+.location-paragraph {
+    font-family: var(--font-text);
+    color: var(--color-font);
+    font-size: 1.8vw;
+    padding: 5vw 7vw 0.2vw 7vw;
+}
+
+@media screen and (max-width:425px) {
+    .location-h2 {
+        font-size: 8vw;
+        padding-bottom: 8vw;
+    }
+    
+    .location-paragraph {
+        font-size: 4vw;
+    }    
+
+    .location-map {
+        width: 80vw;
+        height: 80vw;
+    }
+}

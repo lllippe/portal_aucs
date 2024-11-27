@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Judson:ital,wght@0,400;0,700;1,400&family=Kufam:ital,wght@0,400..900;1,400..900&display=swap&family=Permanent+Marker');
+@import url('header.css');
+@import url('welcome.css');
+@import url('calendar.css');
+@import url('campaigns.css');
+@import url('donations.css');
+@import url('location.css');
+@import url('pontos.css');
+@import url('lyrics.css');
+@import url('footer.css');
+
+:root {
+    --font-title: "Jua";
+    --font-title-two: "Kufam";
+    --font-text: "Judson";
+    --font-developer: "Permanent Marker";
+    --color-base: #FEF9F0;
+    --color-font: #493628;
+    --color-elements: #D6C0B3;
+    --color-elements-second: #B7B7B7;
+    --color-elements-third: #EDDFE0;
+    --color-elements-forth: #4A4947;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-base);
+}

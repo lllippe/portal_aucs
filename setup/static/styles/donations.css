@@ -1,0 +1,40 @@
+.donations {
+    text-align: center;
+    padding-bottom: 5vw;
+    background-color: var(--color-elements-forth);
+}
+
+.donations-h2 {
+    font-family: var(--font-title-two);
+    color: var(--color-base);
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 2vw;
+}
+
+.donations-paragraph {
+    font-family: var(--font-text);
+    color: var(--color-base);
+    font-size: 1.8vw;
+    padding: 5vw 7vw;
+}
+
+.second-paragraph {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+
+@media screen and (max-width: 425px) {
+    .donations-h2 {
+        font-size: 8vw;
+    }
+    
+    .donations-paragraph {
+        font-size: 3.5vw;
+        text-align: justify;
+    }
+    
+    .second-paragraph {
+        text-align: center;
+    }   
+}   
